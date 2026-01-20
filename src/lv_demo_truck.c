@@ -1853,7 +1853,7 @@ static void create_about_panel(lv_obj_t * parent, lv_obj_t * viewer)
     lv_obj_remove_flag(logo_viewer, LV_OBJ_FLAG_SCROLLABLE);
     lv_gltf_set_background_mode(logo_viewer, LV_GLTF_BG_MODE_SOLID);
 
-    lv_gltf_model_t * model = lv_gltf_load_model_from_file(logo_viewer, "lvgl_logo_with_text.glb");
+    lv_gltf_model_t * model = lv_gltf_load_model_from_file(logo_viewer, "assets/lvgl_logo_with_text.glb");
     LV_ASSERT_NULL(model);
     lv_gltf_model_play_animation(model, 0);
     lv_gltf_set_camera(logo_viewer, 1);
@@ -2342,10 +2342,7 @@ static lv_obj_t * add_slider_to_row(lv_obj_t * row, lv_color_t color)
     lv_obj_set_size(sldr, LV_PCT(100), 20);
     lv_obj_set_style_bg_color(sldr, color, LV_PART_MAIN);
     lv_obj_set_style_radius(sldr, 4, 0);
-    //lv_obj_set_style_pad_all(sldr, 10, LV_PART_MAIN);
     lv_obj_set_style_margin_all(sldr, 6, LV_PART_MAIN);
-    //lv_obj_set_style_margin_top(sldr, 6, LV_PART_MAIN);
-    //lv_obj_set_style_margin_bottom(sldr, 6, LV_PART_MAIN);
     style_slider(sldr, SLIDER_COLOR);
 
     return sldr;

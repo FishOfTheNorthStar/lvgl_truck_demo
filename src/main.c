@@ -24,7 +24,6 @@
 #include <string.h>
 
 #include "lvgl/lvgl.h"
-//#include "lvgl/demos/lv_demos.h"
 #include "lv_demo_truck.h"
 
 #include "src/lib/driver_backends.h"
@@ -152,7 +151,7 @@ int main(int argc, char **argv)
 
 #if LV_USE_DEMO_GLTF
     uint32_t start_tick = lv_tick_get();
-	lv_obj_t * viewer = lv_demo_truck( "truck_carveup_8.glb");
+	lv_obj_t * viewer = lv_demo_truck( "assets/truck_carveup_8.glb");
     
 	LV_LOG("GLTF load time %u\n", lv_tick_elaps(start_tick));
 	
